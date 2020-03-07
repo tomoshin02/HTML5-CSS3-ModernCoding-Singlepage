@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>singlepage</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <title>singlepage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- 順番注意！ -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://kit.fontawesome.com/1f3eb67f71.js" crossorigin="anonymous"></script> -->
   </head>
   <body>
     <header class="header">
@@ -23,52 +26,101 @@
         デザインの専門学校を卒業し、制作会社での業務経験を経て、現在はフリーランスとして働いています。
       </p>
       <p class="about-text">このサイトは「HTML5/CSS3 モダンコーディング」という書籍のサンプルとして作られた、架空のWebデザイナーのポートフォリオサイトです。<br>
-      このサンプルのようなサイトをいちから作る過程を通して、HTMLとCSSの実践的なコーディングノウハウを学ぶことができます。</p>
+      このサンプルのようなサイトをいちから作る過程を通して、HTMLとCSSの実践的なコーディングノウハウを学ぶことができます。
+      </p>
     </section>
     <section class="works">
       <h2 class="heading">WORKS</h2>
       <div class="works-wrapper">
-        <div class="work-box">
+        <div class="work-box tree">
           <img class="work-image" src="images/tree.jpg" alt="制作事例１">
-          <p class="work-text">
-            一つ目の制作事例が入ります。<br>
-            簡単な説明が入ります。<br>
-            使用ツール:XXX, XXX, XXX<br>
-            <a href="#" class="button">READ MORE</a>
-          </p>
+          <div class="work-description">
+            <div class="work-description-inner">
+              <p class="work-text">
+                一つ目の制作事例が入ります。<br>
+                簡単な説明が入ります。<br>
+                使用ツール :XXX, XXX, XXX<br>
+                <a href="#" class="button button-ghost">READ MORE</a>
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="work-box">
+        <div class="work-box building">
           <img class="work-image" src="images/building.jpg" alt="制作事例２">
+          <div class="work-description">
+            <div class="work-description-inner">
           <p class="work-text">
             二つ目の制作事例が入ります。<br>
             簡単な説明が入ります。<br>
             使用ツール:XXX, XXX, XXX<br>
-            <a href="#" class="button">READ MORE</a>
+            <a href="#" class="button button-ghost">READ MORE</a>
           </p>
+          </div>
+          </div>
         </div>
-        <div class="work-box">
+        <div class="work-box lake">
           <img class="work-image" src="images/lake.jpg" alt="制作事例３">
+          <div class="work-description">
+            <div class="work-description-inner">
           <p class="work-text">
             三つ目の制作事例が入ります。<br>
             簡単な説明が入ります。<br>
             使用ツール:XXX, XXX, XXX<br>
-            <a href="#" class="button">READ MORE</a>
+            <a href="#" class="button button-ghost">READ MORE</a>
           </p>
         </div>
-        <div class="work-box">
+      </div>
+        </div>
+        <div class="work-box sky">
           <img class="work-image" src="images/sky.jpg" alt="制作事例４">
+          <div class="work-description">
+            <div class="work-description-inner">
           <p class="work-text">
             四つ目の制作事例が入ります。<br>
             簡単な説明が入ります。<br>
             使用ツール:XXX, XXX, XXX<br>
-            <a href="#" class="button">READ MORE</a>
+            <a href="#" class="button button-ghost">READ MORE</a>
           </p>
         </div>
       </div>
+        </div>
+      </div>
     </section>
-    <section class="skills">
-    </section>
-    <section class="contact" id="contact">
+
+
+  <section class="skills">
+    <h2 class="heading">MY SKILLS</h2>
+    <div class="skills-wrapper">
+      <div class="skill-box">
+        <i class="skill-icon fa fa-lightbulb-o"></i>
+        <div class="skill-title">IDEA</div>
+        <p class="skill-text">
+          何かを考えることが好きです。<br>
+          新しいことを思いついては試しています。<br>
+          ディレクションの経験もあります。
+        </p>
+      </div>
+      <div class="skill-box">
+        <i class="skill-icon fa fa-paint-brush"></i>
+        <div class="skill-title">DESIGN</div>
+        <p class="skill-text">
+          見た目の綺麗さだけじゃなくて、<br>
+          使いやすさ、情報の伝わりやすさなど、<br>
+          その先まで考えることを意識しています。
+        </p>
+      </div>
+      <div class="skill-box">
+        <i class="skill-icon fa fa-code"></i>
+        <div class="skill-title">CODING</div>
+        <p class="skill-text">
+          HTML/CSSコーディングも行います。<br>
+          正しく美しいマークアップと、<br>
+          今後の変更への強さを考慮しています。
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
     </section>
     <footer class="footer">
     </footer>
