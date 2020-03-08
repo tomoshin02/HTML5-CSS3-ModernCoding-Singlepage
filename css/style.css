@@ -84,12 +84,14 @@ body {
 }
 .heading::before,
 .heading::after {
-  content:'';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #999;
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid;
+  vertical-align: 8px;
+  margin: 0 20px;
+  transform: rotate(45deg);
 }
 .heading::before {
   bottom: 5px;
@@ -107,6 +109,18 @@ body {
 .work-box {
   position: relative;
   display: table-cell;
+  overflow: hidden;
+}
+
+.work-box:hover > .work-image {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.work-box:nth-of-type(odd) .work-image {
+  transform-origin: top center;
+}
+.work-box:nth-of-type(even) .work-image {
+  transform-origin: bottom center;
 }
 .work-image {
   display: block;
@@ -168,7 +182,7 @@ body {
 }
 .work-box:nth-child(odd) .work-description,
 .work-box:nth-child(odd)::after {
-  top: 0
+  top: 0;
 }
 .skills {
   padding: 80px 0;
@@ -268,6 +282,12 @@ body {
   }
   .heading {
     font-size: 2.5rem;
+  }
+  .heading::before,
+  .heading::after {
+    width: .3em;
+    height: .3em;
+    vertical-align: .2em;
   }
   body {
     font-size: 1.3rem;
