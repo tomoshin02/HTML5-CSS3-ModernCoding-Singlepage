@@ -84,12 +84,14 @@ body {
 }
 .heading::before,
 .heading::after {
-  content:'';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #999;
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid;
+  vertical-align: 8px;
+  margin: 0 20px;
+  transform: rotate(45deg);
 }
 .heading::before {
   bottom: 5px;
@@ -107,6 +109,18 @@ body {
 .work-box {
   position: relative;
   display: table-cell;
+  overflow: hidden;
+}
+
+.work-box:hover > .work-image {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.work-box:nth-of-type(odd) .work-image {
+  transform-origin: top center;
+}
+.work-box:nth-of-type(even) .work-image {
+  transform-origin: bottom center;
 }
 .work-image {
   display: block;
@@ -168,7 +182,7 @@ body {
 }
 .work-box:nth-child(odd) .work-description,
 .work-box:nth-child(odd)::after {
-  top: 0
+  top: 0;
 }
 .skills {
   padding: 80px 0;
@@ -201,4 +215,129 @@ body {
 .skill-text {
   margin: 0 20px;
   line-height: 2;
+}
+.contact {
+  padding: 80px 0 150px;
+}
+.contact-form {
+  width: 50%;
+  margin: 50px auto 0;
+}
+.contact-form input[type=text],
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.contact-form textarea {
+  height: 150px;
+}
+.contact-form input[type=submit] {
+  display: block;
+  width: 200px;
+  margin: 40px auto 0;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.contact-form input[type=submit]:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.contact-form input[type=text]:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5) inset;
+}
+.footer {
+  padding: 12px 0;
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .site-title-sub::before,
+  .site-title-sub::after {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .site-title-sub {
+    font-size: 1.7rem;
+  }
+  .site-title {
+    margin-top: 35px;
+    font-size: 5rem;
+  }
+  .header {
+    padding-top: 60px;
+  }
+  .button:hover {
+    opacity: 1;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+  .heading::before,
+  .heading::after {
+    width: .3em;
+    height: .3em;
+    vertical-align: .2em;
+  }
+  body {
+    font-size: 1.3rem;
+  }
+  .about-text {
+    line-height: 1.8;
+  }
+  .works-wrapper,
+  .work-box {
+    display: block;
+  }
+  .work-image {
+    display: none;
+  }
+  .work-description {
+    position: relative;
+  }
+  .work-box::after {
+    top: 0;
+    height: 100%;
+    background-size: cover;
+    transform: none;
+  }
+  .skills-wrapper,
+  .skill-box {
+    display: block;
+  }
+  .skill-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    line-height: 92px;
+  }
+  .skill-box {
+    margin: 40px auto;
+  }
+  .skill-text {
+    margin: 0;
+  }
+}
+@media (max-width: 1024px) {
+  body{
+    background-image: none;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form {
+    width: 80%;
+  }
+  .contact {
+    padding-bottom: 80px;
+  }
 }
